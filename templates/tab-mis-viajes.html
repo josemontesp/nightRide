@@ -1,0 +1,33 @@
+<ion-view view-title="Mis Viajes">
+<ion-content>
+<ion-refresher
+pulling-text="Sigue bajando para actualizar..."
+on-refresh="refresh()">
+</ion-refresher>
+<div class="list">
+	<div class="item item-divider" ng-if="misViajes.yoManejo.length > 0">
+		Viajes donde yo manejo
+	</div>
+	<a class="item" ng-href="#/tab/misViajes/{{viaje.objectId}}" ng-repeat="viaje in misViajes.yoManejo">
+		Desde {{viaje.inicio}} hasta {{viaje.destino}}
+	</a>
+	<div class="item item-divider" ng-if="misViajes.yoTomo.length > 0">
+		Viajes donde yo tomo
+	</div>
+	<a class="item" ng-href="#/tab/misViajes/{{viaje.objectId}}" ng-repeat="viaje in misViajes.yoTomo">
+		Desde {{viaje.inicio}} hasta {{viaje.destino}}
+	</a>
+	<div class="item item-divider" ng-if="misViajes.yoPostuleParaManejar.length > 0">
+		Viajes donde yo postulé para manejar
+	</div>
+	<a class="item" ng-href="#/tab/misViajes/{{viaje.objectId}}" ng-repeat="viaje in misViajes.yoPostuleParaManejar">
+		Desde {{viaje.inicio}} hasta {{viaje.destino}}
+	</a>
+</div>
+<!-- div class="card" ng-repeat="viaje in misViajes">
+<div class="item item-text-wrap">
+	Voy desde <b>{{viaje.inicio}}</b> hasta <b>{{viaje.destino}}</b> y pago <b>{{viaje.pasajeros*viaje.precioPorPersona}}</b> por los {{viaje.pasajeros}}
+</div>
+</div> -->
+</ion-content>
+</ion-view>

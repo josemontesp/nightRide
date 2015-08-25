@@ -1,0 +1,16 @@
+<ion-view view-title="Maneja">
+<ion-content class="padding">
+<ion-refresher
+pulling-text="Sigue bajando para actualizar..."
+on-refresh="refresh()">
+</ion-refresher>
+<a style="text-decoration:none;" ng-href="#/tab/maneja/{{viaje.objectId}}" ng-repeat="viaje in viajes">
+  <div class="card">
+    <div class="item item-divider">{{viaje.creadoPor.nombreCompleto}}</div>
+    <div class="item item-body">
+        Quiere ir desde <b>{{viaje.inicio}}</b> hasta <b>{{viaje.destino}}</b> el {{viaje.timestamp}}
+    </div>
+  </div>
+</a>
+</ion-content>
+</ion-view>

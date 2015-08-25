@@ -1,0 +1,26 @@
+<ion-view view-title="Detalles del viaje">
+<ion-content class="padding">
+<ion-refresher
+pulling-text="Sigue bajando para actualizar..."
+on-refresh="refresh()">
+</ion-refresher>
+<div class="list card">
+  <div class="item item-avatar">
+    <h2>{{viaje.creadoPor.nombreCompleto}}</h2>
+    <p>{{viaje.timestamp}}</p>
+  </div>
+  <div class="item item-body">
+    <img class="full-image" ng-src="https://maps.googleapis.com/maps/api/staticmap?size=512x512&maptype=roadmap\
+&markers=size:mid%7Ccolor:red%7C{{viaje.inicio}}%7C{{viaje.destino}}">
+    <h2>Quiere ir desde <b>{{viaje.inicio}}</b> hasta <b>{{viaje.destino}}</b></h1>
+    <p>
+      TLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </p>
+    <h2>
+      ${{viaje.pasajeros*viaje.precioPorPersona}} por {{viaje.pasajeros}} pasajeros
+    </h2>
+  </div>
+  <button class="button button-block button-assertive" ng-click"cancelar()">Cancelar viaje</button>
+</div>
+</ion-content>
+</ion-view>

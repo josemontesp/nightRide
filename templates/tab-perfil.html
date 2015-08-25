@@ -1,0 +1,10 @@
+<ion-view view-title="Perfil">
+  <ion-content>
+    <ion-list>
+    <ion-item>{{user.nombreCompleto || hola}}</ion-item>
+    <ion-item>{{user.username || hola}}</ion-item>
+    <ion-item>{{user.telefono || hola}}</ion-item>
+    <button class="button bar button-assertive" ng-click="logout()">Logout</button>
+    </ion-list>
+  </ion-content>
+</ion-view>

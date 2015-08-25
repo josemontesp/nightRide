@@ -1,0 +1,35 @@
+<ion-view view-title="Toma">
+<ion-content>
+<div class="list">
+  <label class="item item-input">
+    <input type="text" placeholder="Dirección de inicio" ng-model="formToma.inicio">
+  </label>
+  <label class="item item-input">
+    <input type="text" placeholder="Dirección de destino" ng-model="formToma.destino">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Date</span>
+    <input type="text" ng-model="formToma.timestamp">
+  </label>
+  
+  <label class="item item-input">
+    <span class="input-label">Enter Date</span>
+    <my-date-time-picker placeholder="Enter Date here" title="Select Date" ng-model="my_model" />
+  </label>
+
+
+  <label class="item item-input">
+    <input type="number" placeholder="Cantidad de pasajeros" ng-model="formToma.pasajeros">
+  </label>
+  <div class="item range range-positive">
+    <i class="icon ion-social-usd-outline"></i>
+    <input type="range" name="volume" min="1000" max="10000" value="5000" step="1000" ng-model="formToma.precioPorPersona">
+    <i class="icon ion-social-usd"></i>
+    <label><span style="font-size:1.8em;">{{formToma.precioPorPersona}}</span> por persona</label>
+  </div>
+  <button class="button button-block button-balanced" ng-click="pedirViaje()">
+  Pedir Viaje
+  </button>
+</div>
+</ion-content>
+</ion-view>

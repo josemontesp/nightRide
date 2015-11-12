@@ -1,8 +1,8 @@
-This is an addon starter template for the [Ionic Framework](http://ionicframework.com/).
+NightRide is a ridesharing platform that enables people going out at night to drink safely by being driven home by qualified drivers, usually students.
 
-## How to use this template
+## How to use this
 
-*This template does not work on its own*. It is missing the Ionic library, and AngularJS.
+*This code does not work on its own*. It is missing the Ionic library, and AngularJS.
 
 To use this, either create a new ionic project using the ionic node.js utility, or copy and paste this into an existing Cordova project and download a release of Ionic separately.
 
